@@ -11,6 +11,14 @@ public class ThreadUsingImplements {
         ThreadEx1 t1 = new ThreadEx1();
         Thread t2 = new Thread(t1);
         t2.start();
+
+
+
+
+
+
+
+
     }
 
     static class ThreadEx1 implements Runnable {
