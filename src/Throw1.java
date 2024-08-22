@@ -3,22 +3,20 @@
 // (powered by FernFlower decompiler)
 //
 
-public class Throw1 {
-    public Throw1() {
-    }
-
-    static class example implements Runnable {
-        example() {
-        }
-
-        public void run() {
-            System.out.println("Thread is running");
-        }
-
-        public static void main(String[] args) {
-            example e1 = new example();
-            Thread thread = new Thread(e1);
-            thread.start();
+ class Throw1 {
+    public static void fun() {
+        try {
+            throw new NullPointerException("demo");
+        } catch (NullPointerException e) {
+            System.out.println("Caught in fun().");
+            throw e;
         }
     }
-}
+        public static void main (String[]args){
+            try {
+                fun();
+            } catch (NullPointerException e){
+                System.out.println("caught in main");
+        }
+    }
+    }

@@ -8,15 +8,24 @@ class Addsubs extends JFrame implements ActionListener
 {
     JTextField tx1,tx2;
     JButton add1,sub;
+    JRadioButton female;
+    JRadioButton male;
     JLabel l1;
     public Addsubs(){
+        male = new JRadioButton("Male");
+        female = new JRadioButton("Female");
         tx1=new JTextField(15);
         tx2=new JTextField(15);
         add1=new JButton("Add");
         sub=new JButton("Sub");
         l1=new JLabel("Result");
+        ButtonGroup GenderGroup= new ButtonGroup();
+        GenderGroup .add(male);
+        GenderGroup .add(female);
         add(tx1);
         add(tx2);
+        add(male);
+        add(female);
         add(add1);
         add(sub);
         add(l1);
